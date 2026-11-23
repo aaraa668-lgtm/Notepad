@@ -1,0 +1,20 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWindowsForms>true</UseWindowsForms>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <!-- Связи двух форм с визуальным конструктором Windows Forms -->
+  <ItemGroup>
+    <Compile Update="блокнотик.cs"><SubType>Form</SubType></Compile>
+    <Compile Update="блокнотик.Designer.cs"><DependentUpon>блокнотик.cs</DependentUpon></Compile>
+    <EmbeddedResource Update="блокнотик.resx"><DependentUpon>блокнотик.cs</DependentUpon></EmbeddedResource>
+    <Compile Update="FormSettings.cs"><SubType>Form</SubType></Compile>
+    <Compile Update="FormSettings.Designer.cs"><DependentUpon>FormSettings.cs</DependentUpon></Compile>
+    <EmbeddedResource Update="FormSettings.resx"><DependentUpon>FormSettings.cs</DependentUpon></EmbeddedResource>
+  </ItemGroup>
+</Project>
